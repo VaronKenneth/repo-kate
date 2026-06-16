@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Esculturas — Portafolio</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="icon" href="assets/logo.jpg" type="image/png">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <div class="app-layout">
+
+    <aside class="sidebar" data-sidebar aria-label="Navegación principal">
+
+      <div class="sidebar__brand">
+
+        <a href="index.html" class="sidebar__brand-link" data-nav-target="home" aria-label="Inicio — portada">
+
+          <img class="sidebar__logo" src="assets/logo.jpg" alt="Logo">
+
+        </a>
+
+      </div>
+
+
+
+      <nav class="sidebar__nav" aria-label="Secciones">
+
+        <div class="nav-item nav-item--portfolio" data-portfolio-wrap>
+
+          <button
+
+            type="button"
+
+            class="nav-item__row nav-item__row--caps"
+
+            data-portfolio-toggle
+
+            aria-expanded="false"
+
+            aria-haspopup="true"
+
+            aria-controls="portfolio-flyout"
+
+            id="btn-portafolio">
+
+            <span>Portafolio</span>
+
+            <span class="nav-item__chevron" aria-hidden="true">&gt;</span>
+
+          </button>
+
+        </div>
+
+
+
+        <div class="nav-item">
+
+          <a href="acerca.html" class="nav-item__row nav-item__row--caps" data-nav-target="acerca">
+
+            <span>Acerca de mí</span>
+
+          </a>
+
+        </div>
+
+      </nav>
+
+
+
+      <div class="sidebar__social">
+        <a href="https://www.linkedin.com/in/trabajaconkathe/" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+        <a href="https://www.instagram.com/kaze_imo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+        <a href="https://www.facebook.com/profile.php?id=100080913762913" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+
+
+
+      <div
+
+        class="portfolio-flyout"
+
+        id="portfolio-flyout"
+
+        data-portfolio-panel
+
+        role="menu"
+
+        aria-labelledby="btn-portafolio"
+
+        hidden>
+
+        <a href="ilustraciones-digitales.html" class="portfolio-flyout__link" data-nav-target="ilustraciones-digitales" role="menuitem">Ilustraciones digitales</a>
+
+        <a href="dibujos.html" class="portfolio-flyout__link" data-nav-target="dibujos" role="menuitem">Dibujos tradicionales</a>
+
+        <a href="esculturas.html" class="portfolio-flyout__link" data-nav-target="esculturas" role="menuitem">Esculturas</a>
+
+        <a href="edicion-video.html" class="portfolio-flyout__link" data-nav-target="edicion-video" role="menuitem">Edición de videos</a>
+
+        <a href="animacion.html" class="portfolio-flyout__link" data-nav-target="animacion" role="menuitem">Animación</a>
+
+      </div>
+
+    </aside>
+
+
+
+    <main class="main-content">
+
+      <section class="section-panel" data-section="esculturas">
+
+        <h1 class="section-panel__title">Esculturas</h1>
+
+        <div data-gallery-esculturas></div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+
+  <div class="modal-detail" data-modal-detail hidden role="dialog" aria-modal="true" aria-labelledby="detail-title">
+
+    <button type="button" class="modal-detail__close" data-close-detail aria-label="Cerrar">&times;</button>
+
+    <div class="modal-detail__body">
+
+      <div class="modal-detail__box">
+
+        <div class="modal-detail__visual">
+
+          <div data-detail-image-wrap hidden>
+
+            <img data-detail-image src="" alt="">
+
+          </div>
+
+          <div data-detail-video-file hidden>
+
+            <video data-detail-video controls playsinline preload="metadata"></video>
+
+          </div>
+
+          <div data-detail-iframe-wrap hidden>
+
+            <iframe data-detail-iframe title="Video" allowfullscreen></iframe>
+
+          </div>
+
+        </div>
+
+        <div class="modal-detail__info">
+
+          <p class="modal-detail__headline" id="detail-title">
+
+            <span class="modal-detail__title-text" data-detail-title></span>
+
+            <span aria-hidden="true"> | </span>
+
+            <span data-detail-year></span>
+
+          </p>
+
+          <p class="modal-detail__meta">
+
+            <strong>Tema:</strong>
+
+            <span class="modal-detail__tema-value" data-detail-tema></span>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="modal-zoom" data-modal-zoom hidden role="dialog" aria-modal="true" aria-label="Vista ampliada">
+
+    <button type="button" class="modal-zoom__close" data-close-zoom aria-label="Cerrar">&times;</button>
+
+    <img class="modal-zoom__img" data-zoom-image src="" alt="">
+
+  </div>
+
+
+
+  <script src="js/portfolio-data.js"></script>
+
+  <script src="js/gallery-component.js"></script>
+
+  <script src="js/sidebar-component.js"></script>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+
